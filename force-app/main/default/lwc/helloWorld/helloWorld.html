@@ -1,0 +1,35 @@
+<template>
+    <!-- //Data Binding-->
+    <lightning-card title="Two Way Data Binding">
+        <div class="slds-m-around_medium">
+            <input type="text" onkeyup={changeHandler}/>
+            <lightning-input type="text" label="Enter Skill Name" onkeyup={changeHandler}> </lightning-input>
+            <div> My FullName is {fullname} and Iam a {text} developer. </div>
+        </div>
+    </lightning-card>
+
+<!-- //Data Binding using @Track-->
+    <lightning-card title="@Track Properties">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter City Name" onkeyup={trackHandler}></lightning-input>
+            <div> Iam from {adress.Country} and My city is {adress.City}. </div>
+        </div>
+    </lightning-card>
+
+<!-- //Data Binding using Spread Operator-->
+    <lightning-card title="Using Spread Operatator on behalf of @Track">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter City Name" onkeyup={spreadHandler}></lightning-input>
+            <div> Iam from {adrs.Cntry} and My city is {adrs.Cty}. </div>
+        </div>
+    </lightning-card>
+
+<!-- //Using Getter Methods-->
+    <lightning-card title="Getter Methods">
+        <div class="slds-m-around_medium">
+            <div>First Name of user 1: {firsuser}</div>
+            <div>Multiply: {multiply}</div>  
+        </div>
+    </lightning-card>
+<!---->
+</template>
