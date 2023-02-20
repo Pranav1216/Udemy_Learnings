@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="CSS from SLDS"> 
+        <div class="slds-p-around_medium">
+
+            <!--Using BOX in slds-->
+            <div class="slds-box ">
+                <p>This is From SLDS Box</p>
+                <span class="slds-badge">Badge Label</span>
+                <span class="slds-badge slds-theme_success">Success Label</span> 
+            </div>
+
+            <!--Using Grid in slds-->
+            <div class="slds-grid slds-gutters">
+                <div style="background-color: red;" class="slds-col slds-size_8-of-12">
+                    <span>Using 8 out of 12</span>
+                </div>
+                <div style="background-color: yellow;" class="slds-col slds-size_4-of-12">
+                    <span>Using 4 out of 12</span>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+
+<!--Using Brand in slds-->
+    <lightning-card>
+        <div class="slds-brand-band slds-brand-band_medium slds-brand-band_group"></div>
+    </lightning-card>
+</template>

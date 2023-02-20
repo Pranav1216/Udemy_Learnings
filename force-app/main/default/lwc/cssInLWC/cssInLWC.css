@@ -1,0 +1,20 @@
+ /* element, classes, pseudo */
+ 
+ /* element*/
+ p{
+    color: blueviolet;
+    font-size: 30px;
+    border: 1px solid red;
+ }
+ 
+ /*classes*/
+ .user{
+    color: brown;
+    font-size: 20px;
+ }
+
+ /*pseudo */
+ .user:hover{
+    font-size: 50px;
+    color: blue;
+ }
