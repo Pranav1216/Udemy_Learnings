@@ -1,3 +1,43 @@
 <template>
-    <c-p2c-alert-component></c-p2c-alert-component>
+
+<!--Simple Data..............-->
+    <c-p2c-alert-component
+        message ="Hurray I got the data"
+        card-heading="Parent to Child primitive data Communucation"
+        integer=30
+        is-valid=false
+    ></c-p2c-alert-component>
+
+<!--Complex Data..............-->
+    <div class="slds-var-m-bottom_medium" ></div>
+    <c-p2c-carousel-component 
+        carousel-details={carouselData}>
+    </c-p2c-carousel-component>
+
+<!--Data Passing on action..............-->
+<div class="slds-var-m-bottom_medium" ></div>
+<lightning-card title="Parent to Child Communication on action">          
+    <div class="slds-var-m-around_medium">
+        <lightning-input 
+            class="slds-var-m-bottom_small" 
+            type="number" 
+            label="Enter Percentage"
+            onkeyup={changeHandler}
+            value={percentage}
+            ></lightning-input>
+        <c-p2c-progres-component progress-value={percentage}></c-p2c-progres-component>
+    </div>
+</lightning-card>
+
+<!--Passing child method to parent ..............-->    
+<div class="slds-var-m-bottom_medium" ></div>
+<lightning-card title="Calling Child Method from Parent">
+    <div class="slds-var-m-around_medium">
+        <c-p2c-slider-component></c-p2c-slider-component>
+        <lightning-button variant="brand" label="Reset Slider" 
+        onclick={handleClick} class="slds-var-m-top_large slds-align_absolute-center" ></lightning-button>
+    </div>
+</lightning-card>
+
+
 </template>
